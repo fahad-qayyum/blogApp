@@ -1,0 +1,36 @@
+<% include partials/header%>
+    <div id="afterNav">
+        <div class="ui text container top attached segment">
+            <div class="ui header huge">Top Picks!</div>
+            <div class="ui divided field items">
+                <%blog.forEach(function(blog){%>
+                    <div class="item">
+                        <div class="image">
+                            <img src="<%= blog.img%>">
+                        </div>
+                        
+                        <div class="content">
+                            <h4>
+                            <%= blog.name%>
+                        </h4>
+                        <div class="meta">
+                        <p>
+                            <%= blog.date.toDateString()%>
+                        </p>
+                            
+                        </div>
+                        <div class="description">
+                         <p>   <%= blog.desc.substring(0,100)%>...</p>
+</div>                        
+                        <div class="extra">
+                        <a href="/blogs/<%= blog._id%>" class="ui floated blue basic button">View More<i class="right chevron icon"></i></i></a>
+                        </div>
+                        </div>
+
+                        
+                        <%});%>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <% include partials/footer%>
