@@ -4,7 +4,8 @@
   "description": "This app would have the trending blocks",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app.js"
   },
   "author": "Fahad Qayyum",
   "license": "ISC",
@@ -14,7 +15,6 @@
     "express": "^4.17.1",
     "express-sanitizer": "^1.0.5",
     "method-override": "^3.0.0",
-    "mongoose": "^5.6.0",
-    "nodemon": "^1.19.1"
+    "mongoose": "^5.6.0"
   }
 }
