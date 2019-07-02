@@ -5,7 +5,8 @@ var express = require("express"), bodyParser = require("body-parser"), mongoose 
 app.use(methodOverRide("_method"));
 
 /*Setting up mongoose*/
-mongoose.connect("mongodb://localhost:27017/blogApp", {useNewUrlParser : true});
+//mongoose.connect("mongodb://localhost:27017/blogApp", {useNewUrlParser : true});
+mongoose.connect("mongodb+srv://fqayyum786:<password>@yelpcamp-esxrl.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser : true});
 var blogSchema = new mongoose.Schema({
     name: String,
     img : String,
