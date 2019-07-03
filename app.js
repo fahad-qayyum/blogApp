@@ -1,5 +1,5 @@
 var express = require("express"), bodyParser = require("body-parser"), mongoose = require("mongoose"), app=express(), methodOverRide = require("method-override"), sanitizer = require("express-sanitizer");
-var  ip = "199.212.68.231/32";
+var  ip = "199.212.68.231";
 /*Setting up method override for other request like put and destroy*/
 app.use(methodOverRide("_method"));
 
