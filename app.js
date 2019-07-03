@@ -1,5 +1,5 @@
 var express = require("express"), bodyParser = require("body-parser"), mongoose = require("mongoose"), app=express(), methodOverRide = require("method-override"), sanitizer = require("express-sanitizer");
-var  ip = "0.0.0.0/0";
+var  ip = "0.0.0.0";
 /*Setting up method override for other request like put and destroy*/
 app.use(methodOverRide("_method"));
 
@@ -88,6 +88,6 @@ app.delete("/blogs/:id", function(req,res){
       }
   }) 
 });
-app.listen(3000,ip,function(){
+app.listen(8080,ip,function(){
     console.log("Blog App server started!");
 })
