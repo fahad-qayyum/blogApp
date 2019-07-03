@@ -1,14 +1,11 @@
 var express = require("express"), bodyParser = require("body-parser"), mongoose = require("mongoose"), app=express(), methodOverRide = require("method-override"), sanitizer = require("express-sanitizer");
-var ip = '127.0.0.1';
-
+var  ip = "199.212.68.231/32";
 /*Setting up method override for other request like put and destroy*/
 app.use(methodOverRide("_method"));
 
 /*Setting up mongoose*/
 //mongoose.connect("mongodb://localhost:27017/blogApp", {useNewUrlParser : true});
-mongoose.connect("mongodb+srv://fahad:fahad@yelpcamp-esxrl.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser : true, useCreateIndex : true}).then(()=>{console.log("Connected to cloud MongoDB!")}).catch(err=>{
-	console.log("Error: ", err.message);
-});
+mongoose.connect("mongodb+srv://fahad:fahad@yelpcamp-esxrl.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser : true, useCreateIndex : true});
 
 var blogSchema = new mongoose.Schema({
     name: String,
