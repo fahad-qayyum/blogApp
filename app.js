@@ -91,6 +91,6 @@ app.delete("/blogs/:id", function(req,res){
       }
   }) 
 });
-app.listen(3000,ip,function(){
+app.listen(8080,ip,function(){
     console.log("Blog App server started!");
 })
