@@ -6,7 +6,9 @@ app.use(methodOverRide("_method"));
 
 /*Setting up mongoose*/
 //mongoose.connect("mongodb://localhost:27017/blogApp", {useNewUrlParser : true});
-mongoose.connect("mongodb+srv://fahad:fahad@yelpcamp-esxrl.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser : true});
+mongoose.connect("mongodb+srv://fahad:fahad@yelpcamp-esxrl.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser : true, useCreateIndex : true}).then(()=>{console.log("Connected to cloud MongoDB!")}).catch(err=>{
+	console.log("Error: ", err.message);
+});
 
 var blogSchema = new mongoose.Schema({
     name: String,
